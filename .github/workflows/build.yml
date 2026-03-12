@@ -11,20 +11,22 @@ permissions:
 jobs:
   build:
     runs-on: macos-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build app
-        run: npm run build:mac
+        run: npm run build:mac -- --publish never
 
       - name: Upload artifacts to release
         uses: softprops/action-gh-release@v2
