@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="resources/icon.png" alt="iOS Simulator Push Notifier" width="128" height="128" />
+  <img src="resources/banner.png" alt="iOS Simulator Push Notifier" />
 </p>
 
 <h1 align="center">iOS Simulator Push Notifier</h1>
@@ -37,7 +37,7 @@ Booted simulators are detected automatically and refresh every 5 seconds. Instal
 
 ### ▶️ One-Click Send
 
-Hit **Run** (or <kbd>⌘R</kbd>) to push the current notification to the selected simulator instantly.
+Hit **Run** (or <kbd>⌘↩</kbd>) to push the current notification to the selected simulator instantly.
 
 ### 📤 Import & Export `.apns` Files
 
@@ -55,12 +55,36 @@ Send a notification once after a delay, or set up a recurring cron schedule. Act
 | New Notification     | <kbd>⌘N</kbd>    |
 | New Folder           | <kbd>⌘⇧N</kbd>   |
 | Delete               | <kbd>⌘⌫</kbd>    |
-| Run Notification     | <kbd>⌘R</kbd>    |
+| Run Notification     | <kbd>⌘↩</kbd>    |
 | Schedule             | <kbd>⌘⇧S</kbd>   |
 
 ### 🌙 Dark Mode
 
 Ships with a dark theme that respects the native macOS look and feel.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **macOS** with [Xcode](https://developer.apple.com/xcode/) installed (for `xcrun simctl`)
+- At least one booted iOS Simulator
+
+### Install
+
+Download the latest release from the [Releases page](https://github.com/gogson/ios-simulator-push-notifier/releases).
+
+### Unsigned App Notice
+
+This app is **not code-signed or notarized** by Apple. macOS will block it from opening by default. To allow it:
+
+1. Try to open the app — macOS will show a warning and refuse.
+2. Go to **System Settings → Privacy & Security**.
+3. Scroll down to the **Security** section — you'll see a message about the blocked app.
+4. Click **Open Anyway** and confirm.
+
+You only need to do this once.
 
 ---
 
@@ -78,19 +102,17 @@ Ships with a dark theme that respects the native macOS look and feel.
 
 ---
 
-## Getting Started
+## Development
 
 ### Prerequisites
 
-- **macOS** with [Xcode](https://developer.apple.com/xcode/) installed (for `xcrun simctl`)
 - **Node.js** 20+
-- At least one booted iOS Simulator
 
 ### Install & Run
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/ios-simulator-push-notifier.git
+git clone https://github.com/gogson/ios-simulator-push-notifier.git
 cd ios-simulator-push-notifier
 
 # Install dependencies
@@ -120,7 +142,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-A macOS `.zip` artifact will be uploaded to the [GitHub Release](../../releases) automatically.
+A macOS `.zip` artifact will be uploaded to the [GitHub Release](https://github.com/gogson/ios-simulator-push-notifier/releases) automatically.
 
 ---
 
